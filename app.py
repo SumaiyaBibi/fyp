@@ -1,6 +1,15 @@
 from flask import Flask, render_template, request
 import sqlite3
 from datetime import datetime
+import pymysql
+
+conn = pymysql.connect(
+    host='SumaiyaBibi.mysql.pythonanywhere-services.com',
+    user='SumaiyaBibi',
+    password='sum@12345678',
+    database='SumaiyaBibi$attendancesystem'
+)
+cursor = conn.cursor()
 
 app = Flask(__name__)
 
